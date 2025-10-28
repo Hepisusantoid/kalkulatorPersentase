@@ -4,23 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kalkulator Persentase</title>
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Kalkulator Persentase</h1>
-    <div class="grid">
-      <button onclick="showFeature('nilaiRasio')">Nilai Rasio</button>
-      <button onclick="showFeature('cariRasio')">Cari Rasionya</button>
-      <button onclick="showFeature('peningkatan')">Peningkatan</button>
-      <button onclick="showFeature('diskon')">Diskon</button>
-      <button onclick="showFeature('perubahan')">Perubahan</button>
-      <button onclick="showFeature('pecahanKeRasio')">Dari Pecahan ke Rasio</button>
-      <button onclick="showFeature('ipk')">IPK</button>
-      <button onclick="showFeature('lagi')">Lagi</button>
+    <header class="header-card">
+      <h1>Kalkulator Persentase</h1>
+      <p class="subtitle">Hitung % • Diskon • IPK • dll</p>
+    </header>
+
+    <div class="feature-grid">
+      <button class="feature-btn" onclick="showFeature('nilaiRasio')">
+        <div class="icon-circle"><i class="fa-solid fa-percent"></i></div>
+        <div class="text-wrap">
+          <span class="label">Nilai Rasio</span>
+          <span class="desc">Berapa % dari total</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('cariRasio')">
+        <div class="icon-circle"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="text-wrap">
+          <span class="label">Cari Rasionya</span>
+          <span class="desc">Dapatkan nilai dari %</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('peningkatan')">
+        <div class="icon-circle"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="text-wrap">
+          <span class="label">Peningkatan %</span>
+          <span class="desc">Kenaikan dari A → B</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('diskon')">
+        <div class="icon-circle"><i class="fa-solid fa-tags"></i></div>
+        <div class="text-wrap">
+          <span class="label">Diskon</span>
+          <span class="desc">Harga setelah diskon</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('perubahan')">
+        <div class="icon-circle"><i class="fa-solid fa-right-left"></i></div>
+        <div class="text-wrap">
+          <span class="label">Perubahan Nilai</span>
+          <span class="desc">% perubahan A ↔ B</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('pecahanKeRasio')">
+        <div class="icon-circle"><i class="fa-solid fa-calculator"></i></div>
+        <div class="text-wrap">
+          <span class="label">Pecahan → %</span>
+          <span class="desc">a / b jadi persen</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('ipk')">
+        <div class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="text-wrap">
+          <span class="label">IPK</span>
+          <span class="desc">Hitung IPK cepat</span>
+        </div>
+      </button>
+
+      <button class="feature-btn" onclick="showFeature('lagi')">
+        <div class="icon-circle"><i class="fa-solid fa-plus"></i></div>
+        <div class="text-wrap">
+          <span class="label">Lagi (Soon)</span>
+          <span class="desc">Fitur next update</span>
+        </div>
+      </button>
     </div>
 
-    <div id="featureOutput"></div>
+    <section id="featureOutput"></section>
+
   </div>
 
   <script src="script.js"></script>
